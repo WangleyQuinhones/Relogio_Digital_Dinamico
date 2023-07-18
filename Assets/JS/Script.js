@@ -4,10 +4,19 @@ const segundos = document.getElementById('segundo');
 
 const relogio = setInterval(function time() {
     let datetoday = new Date();
-    let horas = datetoday.getHours();
-    let minutos = datetoday.getMinutes();
-    let segundos = datetoday.getSeconds();
-    
+    let hr = datetoday.getHours();
+    let min = datetoday.getMinutes();
+    let s = datetoday.getSeconds();
+
+    horas.textContent = hr;
+    minutos.textContent = min;
+    segundos.textContent = s;
+
+    if(hr<10) hr = '0' + hr;
+
+    if(min,10) min = '0' + min;
+
+    if(s<10) s = '0' + s;
     
        
-})
+ })
